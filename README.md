@@ -1,8 +1,30 @@
-# React + Vite
+# Akshay Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive developer portfolio built with **React** and **Vite**. This site showcases my projects, skills, experience, and contact information in a clean and professional layout.
 
-Currently, two official plugins are available:
+## 🚀 Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [React](https://reactjs.org/)
+- [Vite](https://vitejs.dev/)
+- [CSS Modules](https://github.com/css-modules/css-modules)
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+
+
+## 🖼️ Features
+
+- 🔥 Fast performance powered by Vite
+- 🎨 Fully responsive design
+- 🧠 Modular code structure
+- 🌐 Data-driven sections using JSON
+- 📷 Organized assets by section
+
+
+**📬 Contact**
+```Feel free to reach out via the contact form on the site or connect with me through LinkedIn or Email.```
+
+© 2025 Akshay | All rights reserved.
+
+
+---
+
+Let me know if you’d like to include deployment steps (like for Netlify or GitHub Pages), or badges (build status, live demo, etc.).
