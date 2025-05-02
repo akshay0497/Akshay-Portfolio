@@ -1,0 +1,282 @@
+@import "../../vars.css";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  height: 100%;
+  min-height: 400px;
+}
+
+.container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1));
+  transition: all 0.3s ease;
+  opacity: 0;
+}
+
+.container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container:hover::before {
+  opacity: 1;
+}
+
+.image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 1.5rem;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.image::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.7));
+  border-radius: 15px;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.container:hover .image::after {
+  opacity: 1;
+}
+
+.container:hover .image {
+  transform: scale(1.02);
+}
+
+.category {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: var(--color-primary);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.container:hover .category {
+  transform: scale(1.05);
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+}
+
+.title::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--color-primary);
+  transition: all 0.3s ease;
+}
+
+.container:hover .title::after {
+  width: 100%;
+}
+
+.container:hover .title {
+  color: var(--color-primary);
+}
+
+.description {
+  font-size: 1rem;
+  color: var(--color-text);
+  opacity: 0.8;
+  line-height: 1.6;
+  transition: all 0.3s ease;
+  margin-bottom: 1.5rem;
+}
+
+.container:hover .description {
+  opacity: 1;
+}
+
+/* Modal Styles */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 2rem;
+}
+
+.modalContent {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.closeButton {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.closeButton:hover {
+  transform: scale(1.2);
+  color: var(--color-primary);
+}
+
+.carouselContainer {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.carouselButton {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.carouselButton:hover {
+  background: var(--color-primary);
+  transform: scale(1.1);
+}
+
+.modalImage {
+  max-width: 100%;
+  max-height: 70vh;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.imageCounter {
+  color: white;
+  margin-top: 1rem;
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+/* Dark mode specific styles */
+@media (prefers-color-scheme: dark) {
+  .container {
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .container:hover {
+    background: rgba(0, 0, 0, 0.7);
+  }
+}
+
+/* Light mode specific styles */
+@media (prefers-color-scheme: light) {
+  .container {
+    /* background: rgba(255, 255, 255, 0.8); */
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .container:hover {
+    /* background: rgba(255, 255, 255, 0.9); */
+  }
+}
+
+@media screen and (max-width: 830px) {
+  .container {
+    padding: 1.2rem;
+    min-height: 350px;
+  }
+
+  .image {
+    height: 200px;
+  }
+
+  .title {
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    padding: 1rem;
+    min-height: 300px;
+  }
+
+  .image {
+    height: 180px;
+  }
+
+  .title {
+    font-size: 1.2rem;
+  }
+
+  .modalContent {
+    padding: 1rem;
+  }
+
+  .carouselButton {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.5rem;
+  }
+}

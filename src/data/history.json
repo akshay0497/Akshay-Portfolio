@@ -1,0 +1,27 @@
+[
+  {
+    "role": "Software Developer",
+    "organisation": "Multifacet Software Systems Pvt. Ltd.",
+    "startDate": "Jan, 2024",
+    "endDate": "Present",
+    "experiences": [
+      "Developed a real-time screen monitoring SaaS platform using React and Python",
+      "Designed an ad campaign automation tool (AAMS) for workflow and compliance tracking",
+      "Built a Digital Office Management System to automate file and account workflows",
+      "Created a spiritual e-commerce library with React, TypeScript, and Tailwind CSS"
+    ],
+    "imageSrc": "history/multifacet.webp"
+  },
+  {
+    "role": "React Js Developer",
+    "organisation": "Aara Technologies Pvt. Ltd.",
+    "startDate": "Jul, 2023",
+    "endDate": "Nov, 2023",
+    "experiences": [
+      "Engineered responsive UI/UX components for platforms like Netflix and Wakefit",
+      "Developed a React Native mobile app with SQLite for CRUD operations",
+      "Integrated Google Charts for data visualization and optimized performance"
+    ],
+    "imageSrc": "history/aara.png"
+  }
+]

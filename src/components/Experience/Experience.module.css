@@ -1,0 +1,345 @@
+@import "../../vars.css";
+
+.container {
+  position: relative;
+  padding: 2rem;
+  /* margin: 2rem 2%; */
+  z-index: 1;
+}
+
+.title {
+  color: var(--color-text);
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 1.75px;
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+}
+
+.title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: var(--color-primary);
+  border-radius: 2px;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 4rem;
+}
+
+.skills {
+  width: 45%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+  width: calc(50% - 1rem);
+  perspective: 100px;
+}
+
+.skill:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+}
+
+.skillImageContainer {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+  cursor: pointer;
+}
+
+.skill:hover .skillImageContainer {
+  transform: rotateY(180deg);
+}
+
+.skillFront,
+.skillBack {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  padding: 0.2rem;
+  background: rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+}
+
+.skillBack {
+  transform: rotateY(180deg);
+  background: var(--color-primary);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.skill img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: all 0.3s ease;
+}
+
+.skill:hover img {
+  transform: scale(1.1);
+}
+
+.skill p {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--color-text);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.skill:hover p {
+  color: var(--color-primary);
+  transform: scale(1.05);
+}
+
+.history {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.historyItem {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.historyItem::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--color-primary);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.historyItem:hover {
+  transform: translateX(10px);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.historyItem:hover::before {
+  opacity: 1;
+}
+
+.historyItem img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  border-radius: 12px;
+  padding: 0.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+  position: relative;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.historyItem .logoContainer {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+  cursor: pointer;
+}
+
+.historyItem .logoFront,
+.historyItem .logoBack {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  padding: 0.5rem;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.historyItem .logoBack {
+  transform: rotateY(180deg);
+  background: var(--color-primary);
+}
+
+.historyItem:hover .logoContainer {
+  transform: rotateY(180deg);
+}
+
+.historyItem .logoContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: all 0.3s ease;
+}
+
+.historyItem:hover .logoContainer img {
+  transform: scale(1.1);
+}
+
+.historyItemDetails {
+  flex: 1;
+}
+
+.historyItemDetails h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 0.5rem;
+}
+
+.historyItemDetails p {
+  font-size: 1rem;
+  color: var(--color-text);
+  opacity: 0.8;
+  margin-bottom: 1rem;
+}
+
+.historyItemDetails ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.historyItemDetails ul li {
+  font-size: 1rem;
+  color: var(--color-text);
+  opacity: 0.9;
+  margin-bottom: 0.5rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.historyItemDetails ul li::before {
+  content: '▹';
+  color: var(--color-primary);
+  position: absolute;
+  left: 0;
+}
+
+/* Dark mode specific styles */
+@media (prefers-color-scheme: dark) {
+  .skill {
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  .skill:hover {
+    background: rgba(0, 0, 0, 0.7);
+  }
+
+  .skillFront {
+    background: rgba(0, 0, 0, 0.3);
+  }
+
+  .skillBack {
+    background: var(--color-primary);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  }
+
+  .historyItem {
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  .historyItem:hover {
+    background: rgba(0, 0, 0, 0.7);
+  }
+}
+
+/* Light mode specific styles */
+@media (prefers-color-scheme: light) {
+
+
+  .skillBack {
+    background: var(--color-primary);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .historyItem {
+    /* background: rgba(255, 255, 255, 0.8); */
+  }
+
+  .historyItem:hover {
+    /* background: rgba(255, 255, 255, 0.9); */
+  }
+}
+
+@media screen and (max-width: 830px) {
+  .content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .skills {
+    width: 100%;
+  }
+
+  .skill {
+    width: calc(33.33% - 1.33rem);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .skill {
+    width: calc(50% - 1rem);
+  }
+
+  .historyItem {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .historyItem img {
+    margin-bottom: 1rem;
+  }
+
+  .historyItemDetails ul li {
+    padding-left: 0;
+  }
+
+  .historyItemDetails ul li::before {
+    display: none;
+  }
+}

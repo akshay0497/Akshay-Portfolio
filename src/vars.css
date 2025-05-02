@@ -1,0 +1,31 @@
+:root {
+  /* Light theme colors - Professional Portfolio */
+  --color-text: #2c3e50;
+  --color-primary: #3498db;
+  --color-secondary: #2980b9;
+  --color-dark: #1a252f;
+  --color-bg: #f8f9fa;
+  --color-nav-bg: rgba(248, 249, 250, 0.8);
+  --color-shadow: rgba(0, 0, 0, 0.1);
+  --color-accent: #2ecc71;
+  --color-code-bg: #ecf0f1;
+  --color-border: #bdc3c7;
+  --color-highlight: #f1c40f;
+
+  /* Fonts */
+  --font-roboto: "Roboto";
+}
+
+[data-theme='dark'] {
+  --color-text: #ecf0f1;
+  --color-primary: #3498db;
+  --color-secondary: #2980b9;
+  --color-dark: #1a252f;
+  --color-bg: #1a252f;
+  --color-nav-bg: rgba(26, 37, 47, 0.8);
+  --color-shadow: rgba(0, 0, 0, 0.3);
+  --color-accent: #2ecc71;
+  --color-code-bg: #2c3e50;
+  --color-border: #34495e;
+  --color-highlight: #f1c40f;
+}

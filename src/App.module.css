@@ -1,0 +1,34 @@
+@import "./vars.css";
+
+.app {
+  background-color: var(--color-bg);
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  /* position: relative; */
+  /* //padding-bottom: 300px; Add padding to account for fixed footer */
+}
+
+.mainContent {
+  padding-top: 80px; /* Add padding to account for fixed navbar */
+  min-height: calc(100vh - 80px); /* Subtract navbar height */
+  position: relative;
+  z-index: 1;
+}
+
+/* Add smooth transitions for theme changes */
+.app > * {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+@media screen and (max-width: 830px) {
+  .app {
+    padding-bottom: 400px; /* Increase padding for mobile */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .app {
+    padding-bottom: 500px; /* Further increase padding for smaller screens */
+  }
+}
