@@ -12,7 +12,13 @@ export const Projects = () => {
   const categories = ["all", "web", "app", "ai"];
   
   const filteredProjects = projects.filter((project) => {
-    const matchesCategory = selectedCategory === "all" || project.category === selectedCategory;
+    // const matchesCategory = selectedCategory === "all" || project.category === selectedCategory;
+    const matchesCategory =
+  selectedCategory === "all" ||
+  (Array.isArray(project.category)
+    ? project.category.includes(selectedCategory)
+    : project.category === selectedCategory);
+
     const matchesSearch = project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          project.description.toLowerCase().includes(searchQuery.toLowerCase());
     return matchesCategory && matchesSearch;

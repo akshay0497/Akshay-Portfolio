@@ -35,7 +35,14 @@ export const ProjectCard = ({ project }) => {
           alt={project.title}
           className={styles.image}
         />
-        <span className={styles.category}>{project.category}</span>
+        {/* <span className={styles.category}>{project.category}</span> */}
+          <span className={styles.category}>
+    {Array.isArray(project.category)
+      ? project.category.map((cat) => cat.toUpperCase()).join(" / ")
+      : project.category.toUpperCase()}
+  </span>
+
+
         <h3 className={styles.title}>{project.title}</h3>
         <p className={styles.description}>{project.description}</p>
       </div>

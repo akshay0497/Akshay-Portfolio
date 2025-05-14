@@ -11,7 +11,7 @@ export const projects = [
     title: "Workflow Management System",
     imageSrc: "projects/wms.webp",
     description: "A digital office solution developed to automate internal workflows like file tracking, split file, and pdf counter, enhancing organizational productivity and reducing manual work.",
-    category: "web",
+    category:["app", "Web"],
     demoUrl: "https://wms-demo.com",
     githubUrl: "https://github.com/yourusername/wms"
   },
@@ -19,7 +19,7 @@ export const projects = [
     title: "Attendance Management System",
     imageSrc: "projects/face.webp",
     description: "A real-time attendance tracking system using facial recognition and geolocation data, developed for improved workforce monitoring and reporting accuracy.",
-    category: "ai",
+    category: ["ai", "app", 'Web'],
     demoUrl: "https://attendance-demo.com",
     githubUrl: "https://github.com/yourusername/attendance-system"
   },
@@ -38,5 +38,29 @@ export const projects = [
     category: "web",
     demoUrl: "https://elibrary-demo.com",
     githubUrl: "https://github.com/yourusername/elibrary"
-  }
+  },
+  {
+    title: "MedCure - First Aid App",
+    imageSrc: "projects/medcure.webp",
+    description: "MedCure is a bilingual (Hindi-first, English-second) React Native application that serves as a first-aid guide for medical emergencies. It features an industrial UI, Redux-Saga for state management, and full app translation using i18n. Designed for rapid access in critical situations, it also supports API-driven scalability.",
+    category: ["app", "Web"],
+    demoUrl: "https://medcure-demo.com", 
+    githubUrl: "https://github.com/yourusername/medcure"
+  },
+  {
+    title: "Task Manager - CRUD with Alerts (Self)",
+    imageSrc: "projects/taskmanager.jpg",
+    description: "A productivity-focused mobile app with full CRUD functionality and intuitive swipe-based gestures for editing and deleting tasks. Built using React Native, it integrates local notifications to alert users when task deadlines approach. Includes form validation, real-time updates, and an informative UI for efficient task handling.",
+    category: "app",
+    demoUrl: "https://taskmanager-demo.com", 
+    githubUrl: "https://github.com/yourusername/task-manager-app"
+  },
+  {
+    title: "Face Tracker - Real-Time Detection (On-going)",
+    imageSrc: "projects/facetracker.jpg",
+    description: "A real-time face tracking application using computer vision. It detects and tracks faces through a device camera, suitable for surveillance, attendance systems, or gesture-based interactions. Developed using Python, OpenCV, and React Native integration for mobile deployment.",
+    category: ["web", "app", 'ai'],
+    demoUrl: "https://facetracker-demo.com", 
+    githubUrl: "https://github.com/yourusername/face-tracker"
+  }  
 ]; 
