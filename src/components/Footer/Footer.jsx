@@ -19,8 +19,8 @@ export const Footer = () => {
           </div>
           <div className={styles.contactItem}>
             <img src={getImageUrl("footer/call.png")} alt="Phone" className={styles.icon} />
-            <a href="tel:+91-8668855732" className={styles.link}>
-              +91 8668855732
+            <a href="tel:+91-8668855737" className={styles.link}>
+              +91 8668855737  
             </a>
           </div>
           <div className={styles.contactItem}>
